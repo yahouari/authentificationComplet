@@ -1,0 +1,119 @@
+<!--
+<div class="container-fluid view1" >
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="col-md-6 col-lg-6 col-s-12" style="width: 70px">
+      <img src="../../assets/img/logo.png" id="logo" > Himy
+    </h1>
+    <ul class="col-md-6 col-lg-6 col-s-12 nav1">
+
+    </ul>
+
+  </div>
+<div id="ins" class="col-md-7 col-sm-6 col-xs-12 ">
+    <div class="panel-heading "  ><h1 class="text-center">Inscription</h1> </div>
+    <div class="panel-body" >
+
+      <form #f="ngForm" name="form" [formGroup]="form">
+
+        <div class="form-group">
+
+          <label class="control-label c"><h2>E-mail</h2></label>
+          <input type="email" class="form-control"  placeholder="xyz@email.com"
+                 formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}" ngModel required />
+          <div class="invalid-feedback">
+            <div><h6>Email is required</h6></div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+
+          <label class="control-label c"><h2>Prenom</h2></label>
+          <input type="text" class="form-control"  placeholder="Prenom"
+                 formControlName="prenom" [ngClass]="{'is-invalid':form.get('prenom').touched && form.get('prenom').invalid}" ngModel required />
+          <div class="invalid-feedback">
+            <div><h6>Prenom is required</h6></div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+
+          <label class="control-label c "><h2>Nom</h2></label>
+          <input type="text" class="form-control"  placeholder="Nom"
+                 formControlName="nom" [ngClass]="{'is-invalid':form.get('nom').touched && form.get('nom').invalid}" ngModel required />
+          <div class="invalid-feedback">
+            <div><h6>Name is required</h6></div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+
+
+
+
+
+
+
+
+
+        <div class="form-group">
+
+          <label class="control-label c "><h2>Mot de Passe</h2></label>
+          <input type="password" class="form-control"  placeholder="abc21"
+                 formControlName="password" [ngClass]="{'is-invalid':form.get('password').touched && form.get('password').invalid}" ngModel required />
+          <div class="invalid-feedback">
+            <div><h6> required</h6></div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="form-group">
+
+          <label class="control-label c "><h2>Confirmez Mot de Passe</h2></label>
+          <input type="password" class="form-control"  placeholder="abc21"
+                 formControlName="repassword" [ngClass]="{'is-invalid':form.get('repassword').touched && form.get('repassword').invalid}"  ngModel required />
+          <div class="invalid-feedback">
+            <div><h6> required</h6></div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+
+
+
+
+        <button   class="btn btn-success"  [disabled]="!form.valid" >S'inscrire</button>
+        <br><br>
+
+      </form>
+
+
+
+    </div>
+
+
+
+
+    <div class="alert alert-danger" *ngIf="errorMessage">
+      <strong>{{errorMessage}}</strong>
+    </div>
+
+
+
+</div>
+</div>
+</div>
+<app-footer></app-footer>
+-->
+<div id="hubspotForm">
+
+
+</div>
+<app-footer></app-footer>
+

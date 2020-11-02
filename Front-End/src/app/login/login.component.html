@@ -1,0 +1,94 @@
+<!--<body id="view1" xmlns="http://www.w3.org/1999/html">-->
+
+
+
+<div class="container  " style="opacity: 92%">
+
+
+  <div class="alert alert-danger" *ngIf="mode==1">
+    <strong>Bad credentials!</strong> Invalid username or password.
+  </div>
+
+  <br><br><br><br>
+
+  <div class="card bg-light ">
+    <article class="card-body mx-auto " style="width: 400px;">
+<!--      <img src="../../assets/img/logo.png" id="logo" style="margin-left: 130px" >-->
+
+      <h4 class="card-title mt-3 text-center">Se connecter</h4>
+      <!--      <p class="text-center">Get started with your free account</p>-->
+
+      <p class="divider-text">
+        <!--        <span class="bg-light">OR</span>-->
+      </p>
+      <form #f="ngForm" (ngSubmit)="onLogin(f.value) ">
+        <!-- form-group// -->
+        <div class="form-group input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+          <input ngModel="" type="text" class="form-control" name="username" placeholder="username">
+        </div> <!-- form-group// -->
+        <!--<div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+          </div>
+          <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+971</option>
+            <option value="1">+972</option>
+            <option value="2">+198</option>
+            <option value="3">+701</option>
+          </select>
+          <input name="" class="form-control" placeholder="Phone number" type="text">-->
+        <!--</div> &lt;!&ndash; form-group// &ndash;&gt;
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <select class="form-control">
+            <option selected=""> Select job type</option>
+            <option>Designer</option>
+            <option>Manager</option>
+            <option>Accaunting</option>
+          </select>
+        </div> --><!-- form-group end.// -->
+        <br>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input ngModel="" type="password" class="form-control"  name="password" placeholder="password">
+        </div> <!-- form-group// -->
+        <!-- form-group// -->
+        <div class="form-group">
+          <input type="submit" value="Se connecter" class="btn btn-primary btn-block">
+        </div>
+
+
+        <!-- form-group// -->
+        <p class="text-center">Vous n'avez pas de compte? <a routerLink="/in">s'incrire</a> </p>
+      </form>
+    </article>
+  </div> <!-- card.// -->
+
+</div>
+<!--container end.//-->
+
+<!--<br><br>-->
+<!--<article class="bg-secondary mb-3">
+  <div class="card-body text-center">
+    <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
+    <p class="h5 text-white">Components and templates  <br> for Ecommerce, marketplace, booking websites
+      and product landing pages</p>   <br>
+    <p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com
+      <i class="fa fa-window-restore "></i></a></p>
+  </div>
+  <br><br>
+</article>-->
+
+<br> <br> <br> <br>
+
+<!--
+<app-footer></app-footer>
+</body>
+-->

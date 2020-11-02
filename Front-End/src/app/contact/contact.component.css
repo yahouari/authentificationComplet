@@ -1,0 +1,26 @@
+#hubspotForm{
+  margin-left: 500px;
+}
+#view1
+{
+  background: url(bac.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#logo
+{
+  width: 110px;
+  height:110px;
+
+}
+#title{
+color: azure;
+margin-left: 600px;
+font-family: "Caviar Dreams Bold Italic";
+
+}
+
+#head{
+  height: 120px;
+  background: url("back.jpg");
+}

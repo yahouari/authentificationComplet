@@ -1,0 +1,245 @@
+
+<body  >
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="col-md-6 col-lg-6 col-s-12" style="color: royalblue">
+<!--      <img src="../../assets/img/logo.png" id="logo" > HIMY-->
+    </h1>
+
+
+
+  </div>
+</div>
+
+<!--
+<div class="container  " style="opacity: 92%">
+-->
+
+<div class="row" >
+
+
+  <div class="col-lg-6 col-md-6 " style="background-color: skyblue" id="imgHome">
+    <img src="emi.jpg"  id="emi">
+  </div>
+  <div class="col-lg-6 col-md-6 " >
+  <div class="card bg-light ">
+
+    <article class="card-body mx-auto " style="width: 400px;">
+<!--      <img src="../../assets/img/logo.png" id="logo" style="margin-left: 130px" >-->
+
+      <h4 class="card-title mt-3 text-center">Creer Compte</h4>
+      <!--      <p class="text-center">Get started with your free account</p>-->
+      <!--<p>
+        <a href="" class="btn btn-block btn-twitter" > <i class="fab fa-linkedin"></i>   Login via Linkedin</a>
+        <a href="" class="btn btn-block  btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+        <a href="" class="btn btn-block btn-danger"> <i class="fab fa-google"></i>   Login via Google</a>
+
+
+      </p>-->
+      <p class="divider-text">
+        <span class="bg-light">OR</span>
+      </p>
+      <form #f="ngForm" name="form" [formGroup]="form" >
+        <div class="form-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+          </div>
+          <input type="text" class="form-control"  placeholder="full name"
+                 formControlName="username" [ngClass]="{'is-invalid':form.get('username').touched && form.get('username').invalid}" ngModel required />
+          <div class="invalid-feedback">
+            <div><h6>full name  required</h6></div>
+          </div>
+        </div> <!-- form-group// -->
+        <div class="form-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+          <input type="email" class="form-control  "   placeholder="E-mail"
+                 formControlName="mail" [ngClass]="{'is-invalid':form.get('mail').touched && form.get('mail').invalid}" ngModel required />
+
+          <div class="invalid-feedback">
+            <div><h6>E-mail is required</h6></div>
+          </div>
+        </div><!-- form-group// -->
+        <!--<div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+          </div>
+          <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+971</option>
+            <option value="1">+972</option>
+            <option value="2">+198</option>
+            <option value="3">+701</option>
+          </select>
+          <input name="" class="form-control" placeholder="Phone number" type="text">-->
+        <!--</div> &lt;!&ndash; form-group// &ndash;&gt;
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <select class="form-control">
+            <option selected=""> Select job type</option>
+            <option>Designer</option>
+            <option>Manager</option>
+            <option>Accaunting</option>
+          </select>
+        </div> --><!-- form-group end.// -->
+        <div class="form-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+
+          <input type="password" class="form-control"  placeholder="abc21"
+                 formControlName="password"  ngModel required />
+          <div class="errors" *ngIf="form.get('password').invalid && (form.get('password').touched || form.get('password').dirty)">
+            <div *ngIf="form.get('password').hasError('required')">
+              12 caracters are  required
+            </div>
+            <div class="error-text" *ngIf="form.get('password').hasError('passwordStrength')">
+              {{form.get('password').errors['passwordStrength']}}
+            </div>
+          </div>
+        </div> <!-- form-group// -->
+        <div class="form-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+
+          <input type="password" class="form-control"  placeholder="abc21"
+                 formControlName="repassword" [ngClass]="{'is-invalid':form.get('repassword').touched && form.get('repassword').invalid}"  ngModel required />
+          <div class="invalid-feedback">
+            <div><h6> required</h6></div>
+          </div>
+        </div> <!-- form-group// -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block"  [disabled]="!form.valid"  (click)="onRegister(f.value)"> Creer Compte  </button>
+        </div> <!-- form-group// -->
+        <p class="text-center">Avez-vous un compte? <a routerLink="/login">Log In</a> </p>
+      </form>
+    </article>
+    <div class="alert alert-danger" *ngIf=" errorMessage">
+      <strong>{{errorMessage}}</strong>
+    </div>
+  </div> <!-- card.// -->
+
+</div>
+</div>
+<!--container end.//-->
+
+<!--<br><br>-->
+<!--<article class="bg-secondary mb-3">
+  <div class="card-body text-center">
+    <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
+    <p class="h5 text-white">Components and templates  <br> for Ecommerce, marketplace, booking websites
+      and product landing pages</p>   <br>
+    <p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com
+      <i class="fa fa-window-restore "></i></a></p>
+  </div>
+  <br><br>
+</article>-->
+
+</body>
+
+
+<!--
+<body id="view1" >
+
+
+
+<div class="container  " style="opacity: 92%">
+
+
+
+
+
+  <div class="card bg-light ">
+
+    <article class="card-body mx-auto " style="width: 400px;">
+      <img src="../../assets/img/logo.png" id="logo" style="margin-left: 130px" >
+
+      <h4 class="card-title mt-3 text-center">Creer Compte</h4>
+&lt;!&ndash;      <p class="text-center">Get started with your free account</p>&ndash;&gt;
+      <p>
+        <a href="" class="btn btn-block btn-twitter" > <i class="fab fa-linkedin"></i>   Login via Linkedin</a>
+        <a href="" class="btn btn-block  btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+        <a href="" class="btn btn-block btn-danger"> <i class="fab fa-google"></i>   Login via Google</a>
+
+
+      </p>
+      <p class="divider-text">
+        <span class="bg-light">OR</span>
+      </p>
+      <form #f="ngForm" name="form" >
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="" class="form-control" placeholder="Full name" type="text">
+        </div> &lt;!&ndash; form-group// &ndash;&gt;
+        <div class="form-group input-group ">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+          </div>
+          <input name="" class="form-control" placeholder="Email address" type="email">
+        </div> &lt;!&ndash; form-group// &ndash;&gt;
+        &lt;!&ndash;<div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+          </div>
+          <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+971</option>
+            <option value="1">+972</option>
+            <option value="2">+198</option>
+            <option value="3">+701</option>
+          </select>
+          <input name="" class="form-control" placeholder="Phone number" type="text">&ndash;&gt;
+        &lt;!&ndash;</div> &lt;!&ndash; form-group// &ndash;&gt;
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+          </div>
+          <select class="form-control">
+            <option selected=""> Select job type</option>
+            <option>Designer</option>
+            <option>Manager</option>
+            <option>Accaunting</option>
+          </select>
+        </div> &ndash;&gt;&lt;!&ndash; form-group end.// &ndash;&gt;
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input class="form-control" placeholder="Create password" type="password">
+        </div> &lt;!&ndash; form-group// &ndash;&gt;
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+          </div>
+          <input class="form-control" placeholder="Repeat password" type="password">
+        </div> &lt;!&ndash; form-group// &ndash;&gt;
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block"  (click)="onRegister(f.value)"> Creer Compte  </button>
+        </div> &lt;!&ndash; form-group// &ndash;&gt;
+        <p class="text-center">Avez-vous un compte? <a routerLink="/login">Log In</a> </p>
+      </form>
+    </article>
+  </div> &lt;!&ndash; card.// &ndash;&gt;
+
+</div>
+&lt;!&ndash;container end.//&ndash;&gt;
+
+&lt;!&ndash;<br><br>&ndash;&gt;
+&lt;!&ndash;<article class="bg-secondary mb-3">
+  <div class="card-body text-center">
+    <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
+    <p class="h5 text-white">Components and templates  <br> for Ecommerce, marketplace, booking websites
+      and product landing pages</p>   <br>
+    <p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com
+      <i class="fa fa-window-restore "></i></a></p>
+  </div>
+  <br><br>
+</article>&ndash;&gt;
+
+<app-footer></app-footer>
+</body>
+-->
